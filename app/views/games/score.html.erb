@@ -1,0 +1,19 @@
+<h1 class="text-center my-4">Result</h1>
+
+<div class="card mx-auto" style="max-width: 400px;">
+  <div class="card-body">
+    <h5 class="card-title text-center">Your word: <strong><%= @word %></strong></h5>
+
+    <div class="alert <%= @included ? 'alert-success' : 'alert-danger' %> mt-3">
+      <%= @included ? 'Valid according to the grid' : 'Invalid according to the grid' %>
+    </div>
+
+    <div class="alert <%= @english_word ? 'alert-success' : 'alert-danger' %> mt-3">
+      <%= @english_word ? 'Valid English word' : 'Invalid English word' %>
+    </div>
+
+    <div class="text-center mt-4">
+      <%= link_to 'Play again', new_path, class: 'btn btn-primary' %>
+    </div>
+  </div>
+</div>
